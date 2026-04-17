@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gray-50 text-gray-900 antialiased;
+  }
+}
+
+@layer components {
+  .section-card {
+    @apply bg-white rounded-xl border border-gray-200 shadow-sm;
+  }
+  .section-header {
+    @apply px-6 py-4 border-b border-gray-100 flex items-center justify-between;
+  }
+  .section-title {
+    @apply text-base font-semibold text-gray-900;
+  }
+  .btn-primary {
+    @apply inline-flex items-center gap-1.5 rounded-lg bg-tabby-500 px-3.5 py-2 text-sm font-medium text-white hover:bg-tabby-600 transition-colors;
+  }
+  .btn-secondary {
+    @apply inline-flex items-center gap-1.5 rounded-lg bg-white border border-gray-200 px-3.5 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 transition-colors;
+  }
+  .badge {
+    @apply inline-flex items-center rounded-full px-2 py-0.5 text-xs font-medium;
+  }
+  .badge-green {
+    @apply badge bg-green-50 text-green-700 ring-1 ring-green-600/20;
+  }
+  .badge-red {
+    @apply badge bg-red-50 text-red-700 ring-1 ring-red-600/20;
+  }
+  .badge-yellow {
+    @apply badge bg-yellow-50 text-yellow-700 ring-1 ring-yellow-600/20;
+  }
+  .badge-gray {
+    @apply badge bg-gray-100 text-gray-600;
+  }
+  .badge-blue {
+    @apply badge bg-blue-50 text-blue-700 ring-1 ring-blue-600/20;
+  }
+}
+
+@media print {
+  .no-print { display: none !important; }
+  .print-only { display: block !important; }
+  body { background: white; }
+  .section-card { box-shadow: none; border: 1px solid #e5e7eb; }
+}
